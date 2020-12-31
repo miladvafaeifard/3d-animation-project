@@ -1,7 +1,5 @@
 import './styles.scss';
 
-import { init, run } from './app/app';
-
-init();
+import { run } from './app/app';
 
 run();
