@@ -1,3 +1,7 @@
-import { app } from './app/app';
+import './styles.scss';
 
-app();
+import { init, run } from './app/app';
+
+init();
+
+run();

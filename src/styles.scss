@@ -3,6 +3,7 @@ html {
   margin: 0;
   padding: 0;
 }
+
 body {
   width: 100vw;
   height: 100vh;
@@ -12,6 +13,7 @@ body {
 * {
   touch-action: manipulation;
 }
+
 *,
 *:before,
 *:after {
@@ -25,7 +27,7 @@ body {
   align-items: center;
 }
 
-#canvas3D {
+.canvas-render {
   position: absolute;
   top: 0;
   width: 100%;

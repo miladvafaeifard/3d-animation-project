@@ -1,19 +1,19 @@
 const path = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
   entry: './src/main.ts',
 
   plugins: [
-    new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({ filename: 'main.[contenthash].css' }),
     new HtmlWebpackPlugin({
       title: '3D | Dev',
       template: path.resolve(__dirname, '../src/index.html'),
     }),
+    new ProgressBarPlugin(),
   ],
 
   module: {
@@ -25,13 +25,16 @@ module.exports = {
         exclude: [/node_modules/],
       },
       {
-        test: /.scss$/,
+        test: /\.s(a|c)ss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: 'style-loader',
           },
           {
-            loader: 'style-loader',
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
           },
           {
             loader: 'sass-loader',
@@ -45,7 +48,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js', '.scss'],
   },
 
   optimization: {
