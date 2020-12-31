@@ -1,3 +1,22 @@
-# Playground: 3d Car model
+# 🚀 Welcome to your new 3D awesome project!
 
-some free 3d models can be downloaded: https://sketchfab.com/
+This project has been created using **webpack scaffold**, you can now run
+
+running watchly:
+
+```
+npm start
+```
+or 
+
+```
+npm run build
+```
+
+or
+
+```
+yarn build
+```
+
+to bundle your application

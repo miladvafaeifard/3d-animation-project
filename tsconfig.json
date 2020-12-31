@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "declaration": false,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es6",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "noUnusedLocals": true
+  },
+  "files": ["src/main.ts"],
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
